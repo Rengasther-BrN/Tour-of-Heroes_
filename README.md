@@ -1,4 +1,4 @@
-<h1>Tuor of Heroes</h1>
+<h1>Tour of Heroes</h1>
 
 <p>The Tour of Heroes application that you build helps a staffing agency manage its stable of heroes. The application has many of the features that you'd expect to find in any data-driven application.</p>
 
