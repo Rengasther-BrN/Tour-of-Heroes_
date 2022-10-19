@@ -1,10 +1,13 @@
+<!-- Só mostrar esse bloco se estiver alguma mensgem -->
 <mat-accordion *ngIf="messageService.getMessages().length">
   <mat-expansion-panel expanded="true">
     <mat-expansion-panel-header>
-      <mat-panel-title> Mensagens </mat-panel-title>
+      <mat-panel-title> 
+        Mensagens 
+      </mat-panel-title>
 
       <mat-panel-description>
-        {{ messageService.getMessages().length }} record(s)
+        {{ messageService.getMessages().length }} registro(s)
       </mat-panel-description>
     </mat-expansion-panel-header>
 

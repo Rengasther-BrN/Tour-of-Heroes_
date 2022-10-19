@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
   getHeroes(): void {
     this.heroService
       .getAll()
-      .subscribe((heroes) => (this.heroes = heroes.slice(1, 5)));
+      .subscribe((heroes) => (this.heroes = heroes.slice(2, 6)));   // slice - recorta o array no caso pega da posição 2 a 6
   }
 
   onSelected(hero: Hero): void {

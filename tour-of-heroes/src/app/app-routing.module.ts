@@ -7,7 +7,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     loadChildren: () =>
-      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
+      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),    // Módulo de recurso de carregamento lento 'Lazy-Loading'
   },
   {
     path: 'heroes',

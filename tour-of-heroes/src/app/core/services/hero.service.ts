@@ -9,6 +9,7 @@ import { MessageService } from './message.service';
   providedIn: 'root',
 })
 export class HeroService {
+  
   private heroesUrl = `${environment.baseUrl}/heroes`;
 
   constructor(
@@ -16,21 +17,21 @@ export class HeroService {
     private messageService: MessageService
   ) {}
 
-  // GET /heroes
+  // GET - no caminho: /heroes
   getAll(): Observable<Hero[]> {
     return this.http
       .get<Hero[]>(this.heroesUrl)
-      .pipe(tap((heroes) => this.log(`fetched ${heroes.length} hero(es)`)));
+      .pipe(tap((heroes) => this.log(`Buscou ${heroes.length} herói(es)`)));
   }
 
-  // GET /heroes/id
+  // GET - no caminho: /heroes/id
   getOne(id: number): Observable<Hero> {
     return this.http
       .get<Hero>(this.getUrl(id))
-      .pipe(tap((hero) => this.log(`fetched ${this.descAttributes(hero)}`)));
+      .pipe(tap((hero) => this.log(`Buscou ${this.descAttributes(hero)}`)));
   }
 
-  // GET /heroes?name=term
+  // GET - no caminho: /heroes?name=term
   search(term: string): Observable<Hero[]> {
     if (!term.trim()) {
       return of([]);
@@ -41,41 +42,43 @@ export class HeroService {
       .pipe(
         tap((heroes) =>
           heroes.length
-            ? this.log(`found ${heroes.length} hero(es) matching "${term}"`)
-            : this.log(`no heroes matching "${term}"`)
+            ? this.log(`Encontrou ${heroes.length} herói(es) como "${term}"`)
+            : this.log(`nenhum herói encontrado "${term}"`)
         )
       );
   }
 
-  // POST /heroes
+  // POST - no caminho: /heroes
   create(hero: Hero): Observable<Hero> {
     return this.http
       .post<Hero>(this.heroesUrl, hero)
-      .pipe(tap((hero) => this.log(`created ${this.descAttributes(hero)}`)));
+      .pipe(tap((hero) => this.log(`criado ${this.descAttributes(hero)}`)));
   }
 
-  // PUT /heroes/id
+  // PUT - no caminho: /heroes/id
   update(hero: Hero): Observable<Hero> {
     return this.http
       .put<Hero>(this.getUrl(hero.id), hero)
-      .pipe(tap((hero) => this.log(`updated ${this.descAttributes(hero)}`)));
+      .pipe(tap((hero) => this.log(`alterado ${this.descAttributes(hero)}`)));
   }
 
-  // DELETE /heroes/id
+  // DELETE - no caminho: /heroes/id
   delete(hero: Hero): Observable<any> {
     return this.http
       .delete<any>(this.getUrl(hero.id))
-      .pipe(tap(() => this.log(`deleted ${this.descAttributes(hero)}`)));
+      .pipe(tap(() => this.log(`deletado ${this.descAttributes(hero)}`)));
   }
 
   private descAttributes(hero: Hero): string {
-    return `Hero ID=${hero.id} and Name=${hero.name}`;
+    return `Herói ID=${hero.id} e Nome=${hero.name}`;
   }
 
+  // Chama o serviço de mensagem
   private log(message: string): void {
     this.messageService.add(`HeroService: ${message}`);
   }
 
+    
   private getUrl(id: number): string {
     return `${this.heroesUrl}/${id}`;
   }

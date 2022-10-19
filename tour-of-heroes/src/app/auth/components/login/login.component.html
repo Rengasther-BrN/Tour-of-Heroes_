@@ -8,7 +8,7 @@
           <input
             formControlName="email"
             matInput
-            placeholder="Email"
+            placeholder="E-mail"
             required
             type="email"
           />
@@ -20,21 +20,21 @@
           <input
             formControlName="password"
             matInput
-            placeholder="Password"
+            placeholder="Senha"
             required
             type="password"
           />
 
           <mat-hint>
-            CAUTION: Do not reuse any of your existing password.
+            CUIDADO: Não reutilize nenhuma senha existente.
           </mat-hint>
 
           <mat-error *ngIf="form.controls['password'].hasError('required')">
-            Password is required.
+            Senha é obrigatória.
           </mat-error>
 
           <mat-error *ngIf="form.controls['password'].hasError('minlength')">
-            Password should contain at least 10 characters.
+            A senha deve conter pelo menos 10 caracteres.
           </mat-error>
         </mat-form-field>
       </p>

@@ -46,10 +46,15 @@ const MODULES = [FlexLayoutModule, IconsModule, MaterialModule, RouterModule];
   ],
 })
 export class CoreModule {
+  
+  // Uma vez que o CoreModule que o core module foi importado em algum lugar do sistema, dai o parentModule terá um valor do carregamento do core     module
+  
   constructor(@Optional() @SkipSelf() parentModule?: CoreModule) {
+    
+    // No momento que o CoreModule tentar ser carregado pela segunda vez
     if (parentModule) {
       throw new Error(
-        'CoreModule has already been loaded. Import this module in the AppModule only.'
+        'CoreModule já foi carregado. Importe este módulo apenas no AppModule.'
       );
     }
   }

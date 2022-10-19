@@ -10,6 +10,8 @@ import { MenuItem } from './core/models/menu-item.model';
 })
 export class AppComponent {
   isLoggedIn$: Observable<boolean>;
+  
+  // Menu 
   menuItems: MenuItem[] = [
     {
       matIcon: 'dashboard',
@@ -22,6 +24,7 @@ export class AppComponent {
       toolTipText: 'Heroes',
     },
   ];
+  
   title = 'Tour of Heroes';
 
   constructor(private authService: AuthService) {

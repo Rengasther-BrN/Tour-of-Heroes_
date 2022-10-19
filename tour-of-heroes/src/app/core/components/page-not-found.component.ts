@@ -7,19 +7,21 @@ import { Component } from '@angular/core';
       <mat-card-title>404: Page Not Found</mat-card-title>
 
       <mat-card-content>
-        We couldn't find that page! Not even with x-ray vision.
+        Não conseguimos encontrar essa página! 
       </mat-card-content>
 
       <mat-card-actions>
+        
         <button mat-raised-button color="primary" routerLink="/">
-          Take Me Home
+          Voltar para o Início
         </button>
+
       </mat-card-actions>
     </mat-card>
   `,
   styles: [
     `
-      :host {
+      :host {       
         text-align: center;
       }
     `,
