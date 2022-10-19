@@ -19,7 +19,7 @@
   <!-- name -->
   <ng-container matColumnDef="name">
     <mat-header-cell *matHeaderCellDef> Nome</mat-header-cell>
-    <mat-cell *matCellDef="let row"> {{ row.name }} </mat-cell>
+    <mat-cell *matCellDef="let row"> {{ row.name | uppercase }} </mat-cell>
   </ng-container>
 
   <!-- actions -->
