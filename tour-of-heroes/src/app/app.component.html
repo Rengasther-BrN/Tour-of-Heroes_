@@ -1,3 +1,4 @@
+<!-- Só vai aparecer se tiver logado usando o subscribe async -->
 <app-toolbar
   [isLoggedIn]="isLoggedIn$ | async"
   [menuItems]="menuItems"
@@ -11,5 +12,6 @@
 
   <router-outlet></router-outlet>
 
+  <!-- Só vai aparecer se tiver logado usando o subscribe async -->
   <app-messages *ngIf="isLoggedIn$ | async"></app-messages>
 </div>

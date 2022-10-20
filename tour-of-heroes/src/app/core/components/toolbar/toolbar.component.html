@@ -22,7 +22,7 @@
 
   <a
     mat-button
-    matTooltip="Login into app"
+    matTooltip="Faça o login"
     *ngIf="!isLoggedIn"
     routerLink="/login"
   >
@@ -36,6 +36,6 @@
   </div>
 
   <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="onLogout()">Logout</button>
+    <button mat-menu-item (click)="onLogout()" >Logout</button>
   </mat-menu>
 </mat-toolbar>

@@ -19,8 +19,8 @@ export class LoginComponent {
   constructor(private authService: AuthService, private fb: UntypedFormBuilder) {}
 
   onSubmit(): void {
-    if (this.form.valid) {
-      this.authService.login(this.form.value);
+    if (this.form.valid) { 
+      this.authService.login(this.form.value); 
     }
   }
 }
