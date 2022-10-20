@@ -1,6 +1,7 @@
 .input-width {
   width: 50%;
 
+  // Dispositivo com largura máx de 600px faz com que o input fique com 100% da tela
   @media only screen and (max-width: 600px) {
     width: 100%;
   }

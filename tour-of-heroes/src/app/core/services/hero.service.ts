@@ -31,6 +31,7 @@ export class HeroService {
       .pipe(tap((hero) => this.log(`Buscou ${this.descAttributes(hero)}`)));
   }
 
+  // Input pesquisar
   // GET - no caminho: /heroes?name=term
   search(term: string): Observable<Hero[]> {
     if (!term.trim()) {
@@ -78,7 +79,7 @@ export class HeroService {
     this.messageService.add(`HeroService: ${message}`);
   }
 
-    
+  // Aqui foi geredo o getUrl para facilidar e diminuir as linhas de codigos nas requisições HTTP  
   private getUrl(id: number): string {
     return `${this.heroesUrl}/${id}`;
   }

@@ -26,9 +26,10 @@
   <ng-container matColumnDef="actions">
     <mat-header-cell *matHeaderCellDef> Ações </mat-header-cell>
     <mat-cell *matCellDef="let row">
+      <!-- $event.stopPropagation() - não faz mais nenhuma ação depois de acionado, no caso ele nao vai para routerLink= /heros no <mat-row>  -->
       <button
         mat-icon-button
-        matTooltip="Delete this item"
+        matTooltip="Deletar esse herói"
         (click)="delete(row); $event.stopPropagation()"
       >
         <mat-icon>delete</mat-icon>

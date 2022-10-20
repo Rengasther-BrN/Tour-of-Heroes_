@@ -33,12 +33,15 @@ export class HeroesComponent implements OnInit {
 
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       data: dialogData,
-      width: '300px',
+      width: '400px',
     });
 
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
-        this.heroService.delete(hero).subscribe(() => this.getHeroes());
+        this.heroService.delete(hero).subscribe(() => 
+          // this.heroes = this.heroes.filter((h) => h !== hero )  - nesse metódo nao há requisição para API
+          this.getHeroes()
+        );
       }
     });
   }
