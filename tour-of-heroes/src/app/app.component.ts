@@ -11,7 +11,7 @@ import { MenuItem } from './core/models/menu-item.model';
 export class AppComponent {
   isLoggedIn$: Observable<boolean>;
   
-  // Menu 
+  // Menu - usando Input
   menuItems: MenuItem[] = [
     {
       matIcon: 'dashboard',

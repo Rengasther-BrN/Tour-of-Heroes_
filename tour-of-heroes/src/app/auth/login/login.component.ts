@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { UntypedFormBuilder, Validators } from '@angular/forms';
-import { AuthService } from '../../services/auth.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +10,7 @@ import { AuthService } from '../../services/auth.service';
 export class LoginComponent {
   form = this.fb.group({
     email: [
-      { value: 'tour@f.heroes', disabled: true },
+      { value: 'tourofheros@heroes.br', disabled: true },
       [Validators.email, Validators.required],
     ],
     password: ['', [Validators.required, Validators.minLength(10)]],

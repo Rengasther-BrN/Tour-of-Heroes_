@@ -11,15 +11,10 @@ import { CoreModule } from './core/core.module';
 @NgModule({
   declarations: [AppComponent],
   imports: [
-    // @angular
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
-
-    // third-party
-    FlexLayoutModule,
-
-    // app
+    FlexLayoutModule, 
     AuthModule,
     CoreModule,
     AppRoutingModule,
