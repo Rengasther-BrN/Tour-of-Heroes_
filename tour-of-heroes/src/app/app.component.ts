@@ -21,7 +21,7 @@ export class AppComponent {
     {
       fasIcon: 'mask',
       routerLink: '/heroes',
-      toolTipText: 'Heroes',
+      toolTipText: 'Heróis',
     },
   ];
   

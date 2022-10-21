@@ -21,8 +21,9 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes(): void {
-    this.heroService.getAll().subscribe((heroes) => (this.heroes = heroes));
-  }
+    this.heroService.getAll().subscribe((heroes) => (this.heroes = heroes),
+    err => (console.log(err))
+  )}
 
   delete(hero: Hero): void {
     const dialogData: DialogData = {

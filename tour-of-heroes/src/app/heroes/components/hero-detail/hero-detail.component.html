@@ -1,5 +1,6 @@
 <h1>{{ isEditing ? "Update" : "Create" }} Hero</h1>
 
+<!-- novalidate = ele é do próprio HTML e serve para nao anilsar as validações de HTML -->
 <form [formGroup]="form" novalidate>
   <mat-card>
     <mat-card-content fxLayout="column">
@@ -17,7 +18,7 @@
           id="name"
           formControlName="name"
           matInput
-          placeholder="Name"
+          placeholder="Nome"
           type="text"
         />
 
@@ -28,6 +29,7 @@
         <mat-error *ngIf="form.controls['name'].hasError('minlength')">
           Nome deve conter mais que 3 caracteres.
         </mat-error>
+        
       </mat-form-field>
     </mat-card-content>
 

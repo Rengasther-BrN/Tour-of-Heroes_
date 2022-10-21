@@ -55,6 +55,7 @@ export class HeroDetailComponent implements OnInit {
     const { valid, value } = this.form;
 
     if (valid) {
+      // o "as" faz a transformação da const hero para Hero
       const hero: Hero = {
         name: value.name,
       } as Hero;
@@ -80,8 +81,9 @@ export class HeroDetailComponent implements OnInit {
     }
   }
 
+  // Por convenção os métodos privados ficam sempre no final do arquivo
   private showErrorMsg(): void {
-    this.snackBar.open('Please check the errors found.', 'Ok', {
+    this.snackBar.open('Por favor, verifique os erros encontrados.', 'Ok', {
       duration: 5000,
       verticalPosition: 'top',
     });

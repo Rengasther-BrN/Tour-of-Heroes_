@@ -3,15 +3,18 @@
   [isLoggedIn]="isLoggedIn$ | async"
   [menuItems]="menuItems"
   [title]="title"
-  (logout)="onLogout()"
+  (logout)="onLogout()"  
 >
 </app-toolbar>
 
+
 <div class="content" fxLayoutGap="12px">
+
   <app-loading></app-loading>
 
   <router-outlet></router-outlet>
 
   <!-- Só vai aparecer se tiver logado usando o subscribe async -->
   <app-messages *ngIf="isLoggedIn$ | async"></app-messages>
+
 </div>
