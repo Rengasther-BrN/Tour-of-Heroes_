@@ -14,7 +14,7 @@ export class AuthService {
   constructor(private router: Router) {}
 
   login(credentials: Credentials): void {
-    localStorage.setItem('token', credentials.password);
+    localStorage.setItem('token', credentials.password);  // Definir o token com o numero do password
     this.updateLoggedIn();
     this.router.navigate(['/dashboard']);
   }

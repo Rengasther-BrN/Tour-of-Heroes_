@@ -9,6 +9,7 @@ export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(): boolean {
+    // Isso servi para quando der o F5(Atualizar), o authService mantenha TRUE quando estiver logado.
     this.authService.updateLoggedIn();
 
     if (localStorage.getItem('token')) {
