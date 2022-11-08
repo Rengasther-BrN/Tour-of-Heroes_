@@ -1,21 +1,28 @@
 <h1>Tour of Heroes</h1>
 
-<p>The Tour of Heroes application that you build helps a staffing agency manage its stable of heroes. The application has many of the features that you'd expect to find in any data-driven application.</p>
+<p>O aplicativo Tour of Heroes que você cria ajuda uma agência de recrutamento a gerenciar seu grupo de heróis. O aplicativo tem muitos dos recursos que você esperaria encontrar em qualquer aplicativo orientado a dados.</p>
 
-### This tutorial helps you gain confidence that Angular can do whatever you need it to do by showing you how to:
+### Este tutorial ajuda você a ganhar conhecimento de que o Angular com a ajuda da ferramenta Angular Material, pode fazer o que você precisar, como:
 
-* [x] Use Angular directives to show and hide elements and display lists of hero data.
-* [x] Create Angular components to display hero details and show an array of heroes.
-* [x] Use one-way data binding for read-only data.
-* [x] Add editable fields to update a model with two-way data binding.
-* [x] Bind component methods to user events, like keystrokes and clicks.
-* [x] Enable users to select a hero from a list and edit that hero in the details view.
-* [x] Format data with pipes.
-* [x] Create a shared service to assemble the heroes.
-* [x] Use routing to navigate among different views and their components.
+* [x] Use diretivas Angular para mostrar e ocultar elementos e exibir listas de dados de heróis.
+* [x] Crie componentes Angular para exibir detalhes de heróis e mostrar uma variedade de heróis.
+* [x] Use vinculação de dados unidirecional para dados somente leitura.
+* [x] Adicione campos editáveis para atualizar um modelo com vinculação de dados bidirecional.
+* [x] Vincule métodos de componentes a eventos de usuário, como pressionamentos de tecla e cliques.
+* [x] Permita que os usuários selecionem um herói de uma lista e editem esse herói na visualização de detalhes.
+* [x] Formatar dados com pipes.
+* [x] Crie um serviço compartilhado para reunir os heróis.
+* [x] Use roteamento para navegar entre diferentes visualizações e seus componentes.
+* [x] Usando componentes com o Angular Material
 
+### Technologies:
 
-### Tutorials:
+* [JavaScript] - (https://www.w3schools.com/js/js_es6.asp)
+* [TypeScript] - (https://www.typescriptlang.org/)
+* [AngularMaterial] - (https://material.angular.io/)
+* [Font-Awesome] - (https://fontawesome.com/)
+
+### Tutorial:
 
 * [Angular.io] - (https://angular.io/docs)
 _____________________
