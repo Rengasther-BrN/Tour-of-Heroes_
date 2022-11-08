@@ -15,7 +15,7 @@
 * [x] Use roteamento para navegar entre diferentes visualizações e seus componentes.
 * [x] Usando componentes com o Angular Material
 
-### Technologies:
+### Tecnologias:
 
 * [JavaScript] - (https://www.w3schools.com/js/js_es6.asp)
 * [TypeScript] - (https://www.typescriptlang.org/)
